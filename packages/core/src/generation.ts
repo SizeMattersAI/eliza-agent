@@ -442,7 +442,7 @@ export async function generateText({
                 });
 
                 response = openaiResponse;
-                console.log("Received response from OpenAI model.");
+                console.log("Received response from OpenAI model.", openaiResponse);
                 break;
             }
 
