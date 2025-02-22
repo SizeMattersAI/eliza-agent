@@ -1,7 +1,7 @@
 {
   "name": "SizeMatters",
-  "clients": ["twitter", "farcaster", "discord", "telegram"],
-  "modelProvider": "openai",
+  "clients": ["twitter", "farcaster", "telegram"],
+  "modelProvider": "google",
   "settings": {
       "secrets": {},
       "voice": {

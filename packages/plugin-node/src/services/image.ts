@@ -453,6 +453,7 @@ Submit your photo: ${measurement_url}`
         try {
             // First try to get size measurement
             const measurement = await this.measureImage(imageUrl);
+            console.log("measurement", measurement);
             if (measurement) {
                 return {
                     title: `Size Measurement: ${measurement.measurement}cm`,
@@ -462,6 +463,8 @@ Submit your photo: ${measurement_url}`
 
             // If no measurement or measurement failed, fall back to regular image description
             const { data, mimeType } = await this.loadImageData(imageUrl);
+            console.log("data", data);
+            console.log("mimeType", mimeType);
             return await this.provider!.describeImage(data, mimeType);
         } catch (error) {
             elizaLogger.error("Error in describeImage:", error);
